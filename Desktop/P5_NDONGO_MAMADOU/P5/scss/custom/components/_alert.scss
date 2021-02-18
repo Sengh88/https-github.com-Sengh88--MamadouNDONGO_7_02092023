@@ -1,0 +1,13 @@
+.alert
+{
+	& .read-more
+	{
+		position: relative;
+		z-index:1051!important;
+
+		&:hover
+		{
+			color: $warning;
+		}
+	}
+}
