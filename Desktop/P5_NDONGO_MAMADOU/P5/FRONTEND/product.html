@@ -30,127 +30,99 @@
     <div class="header1">
 
     
-    <div class="container">
-        
-            <nav>
-                <ul id="MenuItems">
-                    <li><a href="index.html">Accueil</a></li>
-                    <li><a href="product.html">Produits</a></li>
-                    <li><a href="panier.html">Panier</a></li>
-                    <li><a href="commande.html">Commande</a></li>
-                </ul>
-            </nav>
-            <img src="images/cart.png" width="30px" height="30px">
-            <img src="images/menu.png" class="menu-icon" onclick="menutoggle()">
-        </div>
-        </div>
-       
-      
-
-     <!----- featured products ----->
-     <div class="small-container">
-         <h2 class="title">Produits</h2>
-         <div class="row">
-             <div class="col-4">
-              
-               <img src="images/vcam_1.jpg" alt="cam1">
-                 <h4>cam1</h4>
-                                     
-                <div class="rating">
-                  
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star-o"></i>
-                    
-                 </div>
-                 <p>10 euros</p>
-                 <a class="add-cart cart1" href="#">Add Cart</a>
-             </div>
-
-             <div class="col-4">
-                <img src="images/vcam_2.jpg" alt="cam2">
-                
-                <h4>cam1</h4>
-                <div class="rating">
-                   <i class="fa fa-star"></i>
-                   <i class="fa fa-star"></i>
-                   <i class="fa fa-star"></i>
-                   <i class="fa fa-star"></i>
-                   <i class="fa fa-star-o"></i>
-                  
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <img src="images/logo.png" width="125px" alt="">
                 </div>
-                <p>10 euros</p>
-                <a class="add-cart cart2" href="#">Add Cart</a>
+                <nav>
+                    <ul id="MenuItems">
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="product.html">Produits</a></li>
+                        <li><a href="panier.html">Panier</a></li>
+                        <li><a href="commande.html">Commande</a></li>
+                    </ul>
+                </nav>
+                <img src="images/shopping-cart.svg" width="50px" height="50px">
+                <img src="images/menu.png" class="menu-icon" onclick="menutoggle()">
             </div>
-            <div class="col-4">
-                <img src="images/vcam_3.jpg" alt="cam3">
-                <h4>cam1</h4>
-                <div class="rating">
-                   <i class="fa fa-star"></i>
-                   <i class="fa fa-star"></i>
-                   <i class="fa fa-star"></i>
-                   <i class="fa fa-star"></i>
-                   <i class="fa fa-star-o"></i>
-                  
+            
+            <main class="main pt-5 pb-1">
+                <div class="container">
+                    <h1 class="col-lg-12 text-white text-center pb-5"><u>Détails du produit</u></h1>
+                    <div class="row" id="cam_container"></div>
+                    <div class="bordure2" id="cam_container2">
+                        <div class="divperso">
+                            <label class="personnaliser" for="option">Personnalisé appareil :</label>
+                            <select id="option">
+                            </select>
+                        </div>
+                        <form class="divperso">
+                            <label class="personnaliser2">Sélectionné votre quantité :</label>
+                            <input class=" btnqty" id="moins" type="button" value="-" />
+                            <input class="qty" id ="result" type="number" value="1" />
+                            <input class="btnqty" id="plus" type="button" value="+" />
+                        </form>
+                    </div>
                 </div>
-                <p>10 euros</p>
-                <a class="add-cart cart3" href="#">Add Cart</a>
+            </main>
+
+            <div class="container">
+                <img src="images/vcam_1.jpg" width="300px" alt="velo">
+                <div class="caption">
+                    <h1>Cam1</h1>
+                    <p>gamme unique d'appareils photo anciens.</p>
+                    <span>499.00€</span>
+                    <a class="btn btn-success mt-3" href="cart.html">Ajouter au panier</a>
+                </div>
             </div>
-            <div class="col-4">
-                <img src="images/vcam_4.jpg" alt="cam4">
-                <h4>cam1</h4>
-                <div class="rating">
-                   <i class="fa fa-star"></i>
-                   <i class="fa fa-star"></i>
-                   <i class="fa fa-star"></i>
-                   <i class="fa fa-star"></i>
-                   <i class="fa fa-star-o"></i>
-                   
+
+            <div class="container">
+                <img src="images/vcam_2.jpg" width="300px" alt="velo">
+                <div class="caption">
+                    <h1>Cam2</h1>
+                    <p>gamme unique d'appareils photo anciens.</p>
+                    <span>499.00€</span>
+                    <a class="btn btn-success mt-3" href="cart.html">Ajouter au panier</a>
                 </div>
-                <p>10 euros</p>
-                <a class="add-cart cart4" href="#">Add Cart</a>
             </div>
-            <div class="col-4">
-                <img src="images/vcam_5.jpg" alt="cam5">
-                <h4>cam1</h4>
-                <div class="rating">
-                   <i class="fa fa-star"></i>
-                   <i class="fa fa-star"></i>
-                   <i class="fa fa-star"></i>
-                   <i class="fa fa-star"></i>
-                   <i class="fa fa-star-o"></i>
-                   
+
+            <div class="container">
+                <img src="images/vcam_3.jpg" width="300px" alt="velo">
+                <div class="caption">
+                    <h1>Cam3</h1>
+                    <p>gamme unique d'appareils photo anciens.</p>
+                    <span>499.00€</span>
+                    <a class="btn btn-success mt-3" href="cart.html">Ajouter au panier</a>
                 </div>
-                <p>10 euros</p>
-                <a class="add-cart cart5" href="#">Add Cart</a>
-           
-        </div>
+            </div>
 
-          <!-------- single product details ----------->
+            <div class="container">
+                <img src="images/vcam_4.jpg" width="300px" alt="velo">
+                <div class="caption">
+                    <h1>Cam4</h1>
+                    <p>gamme unique d'appareils photo anciens.</p>
+                    <span>499.00€</span>
+                    <a class="btn btn-success mt-3" href="cart.html">Ajouter au panier</a>
+                </div>
+            </div>
 
-      
-          <div class="col-2">
-            <p>Camera / Appareil</p>
-            <h1>description</h1>
-            <h4>10 euros</h4>
-            <select name="" id="">
-              <option>Select type</option>
-              <option>lentille</option>
-              <option>Select type</option>
-              <option>Select type</option>
-              <option>Select type</option>
-            </select>
-            <input type="number" value="1">
-            <a href="" class="btn">Ajouter au panier</a>
+            <div class="container">
+                <img src="images/vcam_5.jpg" width="300px" alt="velo">
+                <div class="caption">
+                    <h1>Cam5</h1>
+                    <p>gamme unique d'appareils photo anciens.</p>
+                    <span>499.00€</span>
+                    <a class="btn btn-success mt-3" href="cart.html">Ajouter au panier</a>
+                </div>
+            </div>
 
-            <h3>Details du produit <i class="fa fa-indent"></i></h3>
-            <br>
-            <p>hsufhkurjjkfkigdklghklflkjohoinj fjdhlkjhkjhkjfdhkjg</p>
-          </div>
-        </div>
-      </div>
+     
+                      
+            
+            
+            
+            
         
         <!------- footer -------->
 
@@ -189,17 +161,12 @@
                 </div>
             </div>
         </div>
-    
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
-integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
-crossorigin="anonymous"></script>
-<script src="https://kit.fontawesome.com/af1cd2eb9e.js" crossorigin="anonymous"></script>
-<script type="module" src="./js/page-produit.js"></script>
+        <script src="js/produit.js"></script>
 
 </body>
 </html>

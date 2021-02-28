@@ -31,7 +31,7 @@
                     <li><a href="commande.html">Commande</a></li>
                 </ul>
             </nav>
-            <img src="images/cart.png" width="30px" height="30px">
+            <img src="images/shopping-cart.svg" width="50px" height="50px">
             <img src="images/menu.png" class="menu-icon" onclick="menutoggle()">
         </div>
         <div class="row">
@@ -55,7 +55,9 @@
          <h2 class="title">Produits</h2>
          <div class="row">
              <div class="col-4">
-                 <img src="images/vcam_1.jpg">
+                 <a href="product.html">
+                    <img src="images/vcam_1.jpg" alt="cam1">
+                 </a>
                  <h4>cam1</h4>
                  <div class="rating">
                     <i class="fa fa-star"></i>
@@ -69,8 +71,10 @@
              </div>
 
              <div class="col-4">
-                <img src="images/vcam_2.jpg">
-                <h4>cam1</h4>
+                <a href="product.html">
+                    <img src="images/vcam_2.jpg" alt="cam2">
+                 </a>
+                <h4>cam2</h4>
                 <div class="rating">
                    <i class="fa fa-star"></i>
                    <i class="fa fa-star"></i>
@@ -82,8 +86,10 @@
                 <p>10 euros</p>
             </div>
             <div class="col-4">
-                <img src="images/vcam_3.jpg">
-                <h4>cam1</h4>
+                <a href="product.html">
+                    <img src="images/vcam_3.jpg" alt="cam3">
+                 </a>
+                <h4>cam3</h4>
                 <div class="rating">
                    <i class="fa fa-star"></i>
                    <i class="fa fa-star"></i>
@@ -95,8 +101,10 @@
                 <p>10 euros</p>
             </div>
             <div class="col-4">
-                <img src="images/vcam_4.jpg">
-                <h4>cam1</h4>
+                <a href="product.html">
+                    <img src="images/vcam_4.jpg" alt="cam4">
+                 </a>
+                <h4>cam4</h4>
                 <div class="rating">
                    <i class="fa fa-star"></i>
                    <i class="fa fa-star"></i>
@@ -108,8 +116,10 @@
                 <p>10 euros</p>
             </div>
             <div class="col-4">
-                <img src="images/vcam_5.jpg">
-                <h4>cam1</h4>
+                <a href="product.html">
+                    <img src="images/vcam_5.jpg" alt="cam5">
+                 </a>
+                <h4>cam5</h4>
                 <div class="rating">
                    <i class="fa fa-star"></i>
                    <i class="fa fa-star"></i>
@@ -124,6 +134,33 @@
          </div>
         </div>
 
+        <main class="main pt-5 pb-1">
+            <section class="container1">
+                <h1 class="text-white text-center pb-5"><u>Articles disponibles à la vente</u></h1>  
+                    <div class="row" id="cam_container">
+                        <div class="bordure col-lg-5"><img class="card-img" src="http://localhost:3000/images/vcam_1.jpg">
+                            <h2 class="card-title">Cam1</h2>
+                            <a class="btn btn__centre" href="html/produit.html?id_ourson=5be9c8541c9d440000665243"> Détails du produit</a>
+                        </div>
+                            <div class="bordure col-lg-5"><img class="card-img" src="http://localhost:3000/images/vcam_2.jpg">
+                                <h2 class="card-title">Cam2</h2>
+                                <a class="btn btn__centre" href="html/produit.html?id_ourson=5beaa8bf1c9d440000a57d94"> Détails du produit</a>
+                            </div>
+                            <div class="bordure col-lg-5"><img class="card-img" src="http://localhost:3000/images/vcam_3.jpg">
+                                <h2 class="card-title">Cam3</h2>
+                                <a class="btn btn__centre" href="html/produit.html?id_ourson=5beaaa8f1c9d440000a57d95"> Détails du produit</a>
+                            </div>
+                            <div class="bordure col-lg-5"><img class="card-img" src="http://localhost:3000/images/vcam_4.jpg">
+                                <h2 class="card-title">Cam4</h2>
+                                <a class="btn btn__centre" href="html/produit.html?id_ourson=5beaabe91c9d440000a57d96"> Détails du produit</a>
+                            </div>
+                            <div class="bordure col-lg-5"><img class="card-img" src="http://localhost:3000/images/vcam_5.jpg">
+                                <h2 class="card-title">Cam5</h2>
+                                <a class="btn btn__centre" href="html/produit.html?id_ourson=5beaacd41c9d440000a57d97"> Détails du produit</a>
+                            </div>
+                        </div>
+            </section>
+        </main>
         
         <!------- footer -------->
 
@@ -179,6 +216,6 @@
                 }
             }
         </script>
-       <script src="main.js"></script>
+       <script src="js/index.js"></script>
 </body>
 </html>
