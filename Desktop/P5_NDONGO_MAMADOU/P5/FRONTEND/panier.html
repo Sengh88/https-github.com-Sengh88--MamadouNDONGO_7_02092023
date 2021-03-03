@@ -1,252 +1,238 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Orinoco | Appareils Photos vintage</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
-    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
 
-    <!-- OpenGraph -->
-    <meta property="og:url"         content="https://localhost/orinoco" />
-    <meta property="og:title"       content="Découvrez nos produits - Orinoco" />
-    <meta property="og:description" content="Découvrez tous nos produits de caméras vintage sur Orinoco et bénéficiez de nos offres hallucinantes" />
-    <meta property="og:image"       content="images/vcam_5.jpg" />
-    <meta property="og:type"        content="website" />
-    <meta property="og:locale"      content="fr_FR" />
+  <!-- Box icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" />
 
-    <!-- Twitter cards -->
-    <meta property="twitter:card"        content="summary">
-    <meta property="twitter:description" content="Découvrez tous nos produits de caméras vintage sur Orinoco et bénéficiez de nos offres hallucinantes">
-    <meta property="twitter:title"       content="Découvrez nos produits - Orinoco">
-    <meta property="twitter:image"       content="images/vcam_5.jpg">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Custom StyleSheet -->
+  <link rel="stylesheet" href="style.css" />
+  <title>Your Cart</title>
 </head>
+
 <body>
-
-    <div class="header2">
-
-    
-    <div class="container">
-        
-            <nav>
-                <ul id="MenuItems">
-                    <li><a href="index.html">Accueil</a></li>
-                    <li><a href="product.html">Produits</a></li>
-                    <li><a href="panier.html">Panier</a></li>
-                    <li><a href="commande.html">Commande</a></li>
-                </ul>
-            </nav>
-            <img src="images/shopping-cart.svg" width="50px" height="50px">
-            <img src="images/menu.png" class="menu-icon" onclick="menutoggle()">
-        </div>
-        </div>
-       <!--------- cart items details --------->
-       <div class="small-container cart-page">
-
-          <table>
-            <tr>
-              <th>Produit</th>
-              <th>Quantité</th>
-              <th>Sous-total</th>
-            </tr>
-          </table>
-            <div class="container1">
-
-              <h1>Shopping Cart</h1>
-            
-              <div class="cart">
-            
-                <div class="products">
-                  <div class="product">
-                   <img src="images/vcam_1.jpg">
-                    <div class="product-info">
-                    <h3 class="product-name">New Shoes</h3>
-                    <h4 class="product-price">₹ 1,000</h4>
-                      <h4 class="product-offer">50%</h4>
-                        <p class="product-quantity">Qnt: <input type="number" value="1" name="">
-                          <p class="product-remove">
-                           <i class="fa fa-trash" aria-hidden="true"></i>
-                             <span class="remove">Remove</span>
-                               </p>
-                              </div>
-                            </div>
-            
-                  <div class="products">
-                    <div class="product">
-                     <img src="images/vcam_2.jpg">
-                      <div class="product-info">
-                      <h3 class="product-name">New Shoes</h3>
-                      <h4 class="product-price">₹ 1,000</h4>
-                        <h4 class="product-offer">50%</h4>
-                          <p class="product-quantity">Qnt: <input type="number" value="1" name="">
-                            <p class="product-remove">
-                             <i class="fa fa-trash" aria-hidden="true"></i>
-                               <span class="remove">Remove</span>
-                                 </p>
-                                </div>
-                              </div>
-                  <div class="products">
-                    <div class="product">
-                     <img src="images/vcam_3.jpg">
-                      <div class="product-info">
-                      <h3 class="product-name">New Shoes</h3>
-                      <h4 class="product-price">₹ 1,000</h4>
-                        <h4 class="product-offer">50%</h4>
-                          <p class="product-quantity">Qnt: <input type="number" value="1" name="">
-                            <p class="product-remove">
-                             <i class="fa fa-trash" aria-hidden="true"></i>
-                               <span class="remove">Remove</span>
-                                 </p>
-                                </div>
-                              </div>
-      
-                    <div class="products">
-                      <div class="product">
-                       <img src="images/vcam_4.jpg">
-                        <div class="product-info">
-                        <h3 class="product-name">New Shoes</h3>
-                        <h4 class="product-price">₹ 1,000</h4>
-                          <h4 class="product-offer">50%</h4>
-                            <p class="product-quantity">Qnt: <input type="number" value="1" name="">
-                              <p class="product-remove">
-                               <i class="fa fa-trash" aria-hidden="true"></i>
-                                 <span class="remove">Remove</span>
-                                   </p>
-                                  </div>
-                                </div>
-      
-                                <div class="products">
-                                  <div class="product">
-                                   <img src="images/vcam_5.jpg">
-                                    <div class="product-info">
-                                    <h3 class="product-name">New Shoes</h3>
-                                    <h4 class="product-price">₹ 1,000</h4>
-                                      <h4 class="product-offer">50%</h4>
-                                        <p class="product-quantity">Qnt: <input type="number" value="1" name="">
-                                          <p class="product-remove">
-                                           <i class="fa fa-trash" aria-hidden="true"></i>
-                                             <span class="remove">Remove</span>
-                                               </p>
-                                              </div>
-                                            </div>
-      
-                        
-            
-                </div>
-
-          
-
-                   
-          <div class="total-price">
-
-            <table>
-              <tr>
-                <td>Sous-total</td>
-                <td>400 euros</td>
-              </tr>
-              <tr>
-                <td>Tax</td>
-                <td>20 euros</td>
-              </tr>
-              <tr>
-                <td>Total</td>
-                <td>400 euros</td>
-              </tr>
-            </table>
-          </div>
-
-       </div>    
-        
-      
-      
-          <div class="cart-total">
-      
-            <p>
-      
-              <span>Total Price</span>
-      
-              <span>₹ 3,000</span>
-      
-            </p>
-      
-            <p>
-      
-              <span>Number of Items</span>
-      
-              <span>2</span>
-      
-            </p>
-      
-            <p>
-      
-              <span>You Save</span>
-      
-              <span>₹ 1,000</span>
-      
-            </p>
-      
-            <a href="#">Proceed to Checkout</a>
-      
-          </div>
-      
-        </div>
-      
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="navigation container">
+      <div class="logo">
+        <h1><img src="images/logo.png" width="150px" alt=""></h1>
       </div>
-      
-      
-      
-      </body>
-        <!------- footer -------->
 
-        <div class="footer">
-            <div class="container">
-                <div class="row">
-                    <div class="footer-col-1">
-                        <h3>Téléchargez notre application</h3>
-                        <p>pour Android et IOS.</p>
-                        <div class="app-logo">
-                            <img src="images/android.png">
-                            <img src="images/app.png">
-                        </div>
-                    </div>
-                    <div class="footer-col-2">
-                        <img src="images/logo.png">
-                        <p>Notre objectif est que chacun puisse trouver le plaisir d'antan de faire des photos à l'ancienne.</p>
-                    </div>
-                    <div class="footer-col-3">
-                        <h3>Liens</h3>
-                        <ul>
-                            <li>Coupons</li>
-                            <li>blog</li>
-                            <li>Retouner un produit</li>
-                        </ul>
-                    </div>
-                    <div class="footer-col-4">
-                        <h3>Suivez-nous</h3>
-                        <ul>
-                            <li>Facebook</li>
-                            <li>Twitter</li>
-                            <li>Instagram</li>
-                            <li>YouTube</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+      <div class="menu">
+        <div class="top-nav">
+          <div class="logo">
+            <h1>Orinoco Cameras</h1>
+          </div>
+          <div class="close">
+            <i class="bx bx-x"></i>
+          </div>
         </div>
-<!--------js for toggle menu--------->       
 
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
-integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
-crossorigin="anonymous"></script>
-<script src="https://kit.fontawesome.com/af1cd2eb9e.js" crossorigin="anonymous"></script>
-<script type="module" src="./js/page-panier.js"></script>
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">Accueil</a>
+          </li>
+          <li class="nav-item">
+            <a href="product.html" class="nav-link">Produits</a>
+          </li>
+          <li class="nav-item">
+            <a href="panier.html" class="nav-link">Panier</a>
+          </li>
+          <li class="nav-item">
+            <a href="commande.html" class="nav-link">Commande</a>
+          </li>
+          
+          <li class="nav-item">
+            <a href="panier.html" class="nav-link icon"><i class="bx bx-shopping-bag"></i></a>
+          </li>
+        </ul>
+      </div>
 
+      <a href="panier.html" class="cart-icon">
+        <i class="bx bx-shopping-bag"></i>
+      </a>
+
+      <div class="hamburger">
+        <i class="bx bx-menu"></i>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Cart Items -->
+  <div class="container-md cart">
+    <table>
+      <tr>
+        <th>Product</th>
+        <th>Quantity</th>
+        <th>Subtotal</th>
+      </tr>
+      <tr>
+        <td>
+          <div class="cart-info">
+            <img src="images/vcam_1.jpg" alt="">
+            <div>
+              <p>Cam1</p>
+              <span>Prix: €50.00</span>
+              <br />
+              <a href="#">remove</a>
+            </div>
+          </div>
+        </td>
+        <td><input type="number" value="1" min="1"></td>
+        <td>$50.00</td>
+      </tr>
+      <tr>
+        <td>
+          <div class="cart-info">
+            <img src="images/vcam_2.jpg" alt="">
+            <div>
+              <p>Cam2</p>
+              <span>Price: €90.00</span>
+              <br />
+              <a href="#">remove</a>
+            </div>
+          </div>
+        </td>
+        <td><input type="number" value="1" min="1"></td>
+        <td>€90.00</td>
+      </tr>
+      <tr>
+        <td>
+          <div class="cart-info">
+            <img src="images/vcam_3.jpg" alt="">
+            <div>
+              <p>Cam3</p>
+              <span>Price: €60.00</span>
+              <br />
+              <a href="#">remove</a>
+            </div>
+          </div>
+        </td>
+        <td><input type="number" value="1" min="1"></td>
+        <td>€60.00</td>
+      </tr>
+      <tr>
+        <td>
+          <div class="cart-info">
+            <img src="images/vcam_4.jpg" alt="">
+            <div>
+              <p>Cam4</p>
+              <span>Price: €60.00</span>
+              <br />
+              <a href="#">remove</a>
+            </div>
+          </div>
+        </td>
+        <td><input type="number" value="1" min="1"></td>
+        <td>€60.00</td>
+      </tr>
+      <tr>
+        <td>
+          <div class="cart-info">
+            <img src="images/vcam_5.jpg" alt="">
+            <div>
+              <p>Cam5</p>
+              <span>Price: €60.00</span>
+              <br />
+              <a href="#">remove</a>
+            </div>
+          </div>
+        </td>
+        <td><input type="number" value="1" min="1"></td>
+        <td>€60.00</td>
+      </tr>
+    </table>
+
+    <div class="total-price">
+      <table>
+        <tr>
+          <td>Subtotal</td>
+          <td>€200</td>
+        </tr>
+        <tr>
+          <td>Tax</td>
+          <td>€50</td>
+        </tr>
+        <tr>
+          <td>Total</td>
+          <td>€250</td>
+        </tr>
+      </table>
+      <a href="#" class="checkout btn">Procéder au paiment</a>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- Footer -->
+  <footer id="footer" class="section footer">
+    <div class="container">
+      <div class="footer-container">
+        <div class="footer-center">
+          <h3>TELECHARGEZ NOTRE <br> APPLICATION</h3>
+            <img src="images/android.png" width="100px">
+            <img src="images/app.png" width="100px">
+        </div>
+        <div class="footer-center">
+          <h3>INFORMATION</h3>
+          <a href="#">A propos</a>
+          <a href="#">Politique de confidentialité</a>
+          <a href="#">Termes & Conditions</a>
+          <a href="#">Contact</a>
+          <a href="#">Site Map</a>
+        </div>
+        <div class="footer-center">
+          <h3>Mon compte</h3>
+          <a href="#">Mon compte</a>
+          <a href="#">Order History</a>
+          <a href="#">Wish List</a>
+          <a href="#">Newsletter</a>
+          <a href="#">Returns</a>
+        </div>
+        <div class="footer-center">
+          <h3>CONTACTEZ-NOUS</h3>
+          <div>
+            <span>
+              <i class="fas fa-map-marker-alt"></i>
+            </span>
+           123 rue du commerce, 75000 Paris, FRANCE
+          </div>
+          <div>
+            <span>
+              <i class="far fa-envelope"></i>
+            </span>
+            orinoco@orinoco.com
+          </div>
+          <div>
+            <span>
+              <i class="fas fa-phone"></i>
+            </span>
+            01.01.01.01.01
+          </div>
+          <div>
+            <span>
+              <i class="far fa-paper-plane"></i>
+            </span>
+            Dream City, USA
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </footer>
+  <!-- End Footer -->
+
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+  <!-- Custom Script -->
+  <script src="js/index.js"></script>
 </body>
+
 </html>
