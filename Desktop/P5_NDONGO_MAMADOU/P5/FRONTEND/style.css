@@ -62,7 +62,45 @@
     max-width: 100rem;
     margin: 0 auto;
   }
+
+  .order {
+    display: block;
+    align-items: center;
+    padding-left: 30px;
+    padding-bottom: 50px;
+    
+  }
+
   
+  .order__title {
+    display: flex;
+    justify-content: space-between;
+    
+  }
+
+  .order__paragraph {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    
+  }
+
+  .required {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    }
+
+  .errors {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
   @media only screen and (max-width: 1200px) {
     .container {
       padding: 0 3rem;

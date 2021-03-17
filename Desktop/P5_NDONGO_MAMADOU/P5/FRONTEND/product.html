@@ -12,7 +12,7 @@
 
     <!-- Custom StyleSheet -->
     <link rel="stylesheet" href="style.css" />
-    <title>Boy’s T-Shirt</title>
+    <title>Orinoco</title>
 </head>
 
 <body>
@@ -20,7 +20,7 @@
     <nav class="nav">
         <div class="navigation container">
             <div class="logo">
-                <h1><img src="images/logo.png" width="150px" alt=""></h1>
+                <h1><a href="index.html"><img src="images/logo.png" width="150px" alt=""></a></h1>
             </div>
 
             <div class="menu">
@@ -47,12 +47,12 @@
                          <a href="commande.html" class="nav-link">Commande</a>
                      </li>
                      <li class="nav-item">
-                     <a href="panier.html" class="nav-link icon"><i class="bx bx-shopping-bag"></i></a>
+                     <a href="panier.html" class="nav-link icon" id="shop-button"><i class="bx bx-shopping-bag"></i></a>
                      </li>
                 </ul>
             </div>
 
-            <a href="panier.html" class="cart-icon">
+            <a href="panier.html" class="cart-icon" id="shop-button">
                 <i class="bx bx-shopping-bag"></i>
             </a>
 
@@ -64,7 +64,7 @@
 
     <!-- All Products -->
     <section class="section all-products" id="products">
-        <div class="top container">
+        <div class="top container" id="lenses__container">
             <h1>Tout nos produits</h1>
             <form>
                 <select>
@@ -81,10 +81,10 @@
         <div class="product-center container">
             <div class="product">
                 <div class="product-header">
-                    <img src="images/vcam_1.jpg" alt="">
+                    <img src="http://localhost:3000/images/vcam_1.jpg" alt="">
                     <ul class="icons">
                         <span><i class="bx bx-heart"></i></span>
-                        <a href="panier.html"> <span><i class="bx bx-shopping-bag"></i></span>
+                        <a href="panier.html"> <span><i class="bx bx-shopping-bag" id="shop-button"></i></span>
                         </a>
                         <span><i class="bx bx-search"></i></span>
                     </ul>
@@ -105,7 +105,7 @@
             </div>
             <div class="product">
                 <div class="product-header">
-                    <img src="images/vcam_2.jpg" alt="">
+                    <img src="http://localhost:3000/images/vcam_2.jpg" alt="">
 
                     <ul class="icons">
                         <span><i class="bx bx-heart"></i></span>
@@ -127,7 +127,7 @@
             </div>
             <div class="product">
                 <div class="product-header">
-                    <img src="images/vcam_3.jpg" alt="">
+                    <img src="http://localhost:3000/images/vcam_3.jpg" alt="">
 
                     <ul class="icons">
                         <span><i class="bx bx-heart"></i></span>
@@ -149,7 +149,7 @@
             </div>
             <div class="product">
                 <div class="product-header">
-                    <img src="images/vcam_4.jpg" alt="">
+                    <img src="http://localhost:3000/images/vcam_4.jpg" alt="">
 
                     <ul class="icons">
                         <span><i class="bx bx-heart"></i></span>
@@ -171,7 +171,7 @@
             </div>
             <div class="product">
                 <div class="product-header">
-                    <img src="images/vcam_5.jpg" alt="">
+                    <img src="http://localhost:3000/images/vcam_5.jpg" alt="">
 
                     <ul class="icons">
                         <span><i class="bx bx-heart"></i></span>
@@ -269,7 +269,7 @@
     <!-- GSAP -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
     <!-- Custom Script -->
-    <script src="js/index.js"></script>
+    <script src="js/product.js"></script>
 </body>
 
 </html>

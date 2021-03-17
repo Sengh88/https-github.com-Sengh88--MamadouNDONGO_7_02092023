@@ -20,7 +20,7 @@
   <nav class="nav">
     <div class="navigation container">
       <div class="logo">
-        <h1><img src="images/logo.png" width="150px" alt=""></h1>
+        <h1><a href="index.html"><img src="images/logo.png" width="150px" alt=""></a></h1>
       </div>
 
       <div class="menu">
@@ -64,12 +64,12 @@
   </nav>
 
   <!-- Cart Items -->
-  <div class="container-md cart">
+  <div class="container-md cart" id="container-md cart">
     <table>
       <tr>
-        <th>Product</th>
-        <th>Quantity</th>
-        <th>Subtotal</th>
+        <th>Produits</th>
+        <th>Quantités</th>
+        <th>Sous-total</th>
       </tr>
       <tr>
         <td>
@@ -84,7 +84,7 @@
           </div>
         </td>
         <td><input type="number" value="1" min="1"></td>
-        <td>$50.00</td>
+        <td>€50.00</td>
       </tr>
       <tr>
         <td>
@@ -148,10 +148,10 @@
       </tr>
     </table>
 
-    <div class="total-price">
+    <div class="total-price" id="total-price">
       <table>
         <tr>
-          <td>Subtotal</td>
+          <td>Sous-total</td>
           <td>€200</td>
         </tr>
         <tr>
@@ -163,12 +163,60 @@
           <td>€250</td>
         </tr>
       </table>
-      <a href="#" class="checkout btn">Procéder au paiment</a>
+      <a href="#" class="checkout btn" id="checkout btn">Procéder au paiment</a>
 
     </div>
 
   </div>
 
+  <!-- Product order form -->
+  <div class="order">
+    <h2 class="order__title">Commande</h2>
+
+    <p class="order__paragraph">
+        Remplissez le formulaire pour compléter votre commande
+    </p>
+
+    <form action="commande.html">
+        <div>
+            <label for="firstname">Prénom <span class="required">*</span></label>
+            <input type="text" id="firstname" required>
+            <div class="errors"></div>
+        </div>
+
+        <div>
+            <label for="lastname">Nom <span class="required">*</span></label>
+            <input type="text" id="lastname" required>
+            <div class="errors"></div>
+        </div>
+
+        <div>
+            <label for="address">Adresse <span class="required">*</span></label>
+            <input type="text" id="address" required>
+            <div class="errors"></div>
+        </div>
+
+        <div>
+            <label for="city">Ville <span class="required">*</span></label>
+            <input type="text" id="city" required>
+            <div class="errors"></div>
+        </div>
+
+        <div>
+            <label for="email">Email <span class="required">*</span></label>
+            <input type="email" id="email" required>
+            <div class="errors"></div>
+        </div>
+
+        <button type="submit" id="submit">Commander <span>></span></button>
+    </form>
+</div>
+<!-- Product order form -->
+</div>
+</div>
+</div>
+</div>
+<!-- Page wrapper -->
 
 
   <!-- Footer -->
@@ -232,7 +280,7 @@
   <!-- GSAP -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
   <!-- Custom Script -->
-  <script src="js/index.js"></script>
+  <script src="js/panier.js"></script>
 </body>
 
 </html>
