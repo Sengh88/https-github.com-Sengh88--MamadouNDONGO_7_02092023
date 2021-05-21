@@ -8,4 +8,11 @@ for (var i = 0; i < removeCartItems.length; i++) {
     })
 }
 
+    // ------- AFFICHAGE DES PRODUITS DU PANIER-----------//
+
+
+    const positionElement = document.querySelector('#container-md cart')
+    console.log(positionElement);
+
+    // ---------- Si le PANIER est VIDE AFFICHER Le Panier est vide-------//
     

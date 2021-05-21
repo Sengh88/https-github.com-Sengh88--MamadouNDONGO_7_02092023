@@ -1,5 +1,5 @@
 var image = document.querySelector("#lenses__container div.left > div.main > img")
-image.width = "500"
+
 
 
 
@@ -36,7 +36,7 @@ fetch('http://localhost:3000/api/cameras')
         </form>
 
         <form class="form">
-          <input type="number" value="1" min="1">
+          <input type="number" value="${ photo.lenses }" min="${ photo.lenses }">
           <a href="panier.html" class="addCart">Ajouter au panier</a>
         </form>
         <h3>Product Detail</h3>

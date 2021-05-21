@@ -957,13 +957,14 @@
   .product-detail .form input {
     padding: 0.8rem;
     text-align: center;
-    width: 8.5rem;
+    width: 38.5rem;
     margin-right: 2rem;
+    margin-bottom: 5rem;
   }
   
   .product-detail .form .addCart {
     background: #ff7c9c;
-    padding: 0.8rem 4rem;
+    padding: 0.8rem 9rem;
     color: #fff;
     border-radius: 3rem;
   }
