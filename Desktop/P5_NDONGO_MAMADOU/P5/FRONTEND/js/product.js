@@ -1,16 +1,16 @@
-var image = document.querySelector("#lenses__container div.left > div.main > img")
+
+fetch("http://localhost:3000/api/cameras")
+
+  .then(function (response) {
+    return response.json();
+  })
+  .then(function (data) {
+   
+    for (photo of data) {
+      console.log(photo);
 
 
-
-
-fetch('http://localhost:3000/api/cameras')
-.then(function(response) {
-  return response.json();
-})
-.then(function(data) {
-  const products = document.getElementById('lenses__container')
-  for(photo of data) {
-    console.log(photo);
+      
     lenses__container.innerHTML += `
 <div class="details container-md" id="lenses__container"> 
       <div class="left">
@@ -24,7 +24,7 @@ fetch('http://localhost:3000/api/cameras')
         <div class="price">${ photo.price/100 }</div>
         <form>
           <div>
-            <select>
+            <select class="lenses">
               <option value="Select Size" >Options</option>
               <option value="1">${ photo.lenses }</option>
               <option value="2">42</option>
@@ -44,5 +44,15 @@ fetch('http://localhost:3000/api/cameras')
       </div>
     </div>
     `
-}
-})
+    }
+
+    })
+  
+ 
+
+
+
+
+ 
+
+  

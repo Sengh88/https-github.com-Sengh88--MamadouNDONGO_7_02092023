@@ -33,9 +33,9 @@ window.addEventListener("scroll", () => {
 
 // Scroll To
 const links = [...document.querySelectorAll(".scroll-link")];
-links.map(link => {
+links.map((link) => {
   if (!link) return;
-  link.addEventListener("click", e => {
+  link.addEventListener("click", (e) => {
     e.preventDefault();
 
     const id = e.target.getAttribute("href").slice(1);
@@ -62,28 +62,29 @@ gsap.from(".hero-content h2", { opacity: 0, duration: 1, delay: 2, y: -50 });
 gsap.from(".hero-content h1", { opacity: 0, duration: 1, delay: 2.5, y: -45 });
 gsap.from(".hero-content a", { opacity: 0, duration: 1, delay: 3.5, y: 50 });
 
-
-fetch('http://localhost:3000/api/cameras')
-.then(function(response) {
-  return response.json();
-})
-.then(function(data) {
-  const products = document.getElementById('products')
-  for(photo of data) {
-    console.log(photo);
-    products.innerHTML += `
+fetch("http://localhost:3000/api/cameras")
+  .then(function (response) {
+    return response.json();
+  })
+  .then(function (data) {
+    const products = document.getElementById("products");
+    for (photo of data) {
+      console.log(photo);
+      products.innerHTML += `
     <div class="product">
           <div class="product-header">
-            <img src="${ photo.imageUrl }" alt="">
+            <img src="${photo.imageUrl}" alt="">
             <ul class="icons">
               <span><i class="bx bx-heart"></i></span>
-              <span><a href="product-details.html"><i class='bx bxs-purchase-tag'></i></a></span>
+              <span><a href="product-details.html?id=${
+                photo._id
+              }"><i class='bx bxs-purchase-tag'></i></a></span>
               <span><i class="bx bx-search"></i></span>
             </ul>
           </div>
           <div class="product-footer">
             <a href="#">
-              <h3>${ photo.name }</h3>
+              <h3>${photo.name}</h3>
             </a>
             <div class="rating">
               <i class="bx bxs-star"></i>
@@ -92,12 +93,11 @@ fetch('http://localhost:3000/api/cameras')
               <i class="bx bxs-star"></i>
               <i class="bx bx-star"></i>
             </div>
-            <h4 class="price">${ photo.price/100 }</h4>
+            <h4 class="price">${photo.price / 100}</h4>
           </div>
         </div>
-    `
-
-  }
+    `;
+    }
+  });
 
  
-})
