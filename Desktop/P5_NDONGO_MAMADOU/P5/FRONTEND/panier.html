@@ -41,7 +41,7 @@
             <a href="product.html" class="nav-link">Produits</a>
           </li>
           <li class="nav-item">
-            <a href="panier.html" class="nav-link">Panier</a>
+            <a href="panier.html" class="nav-link">Panier</a><span class="counter">0</span>
           </li>
           <li class="nav-item">
             <a href="commande.html" class="nav-link">Commande</a>
@@ -63,159 +63,131 @@
     </div>
   </nav>
 
+  
   <!-- Cart Items -->
+  <h2 class="m-5 text-center">Votre panier:</h2>
   <div class="container-md cart" id="container-md cart">
-    <table>
-      <tr>
-        <th>Produits</th>
-        <th>Quantités</th>
-        <th>Sous-total</th>
-      </tr>
-      <tr>
-        <td>
-          <div class="cart-info">
-            <img src="images/vcam_1.jpg" alt="">
-            <div>
-              <p>Cam1</p>
-              <span>Prix: €50.00</span>
-              <br />
-              <a class="remove" href="#">remove</a>
-            </div>
-          </div>
-        </td>
-        <td><input type="number" value="1" min="1"></td>
-        <td>€50.00</td>
-      </tr>
-      <tr>
-        <td>
-          <div class="cart-info">
-            <img src="images/vcam_2.jpg" alt="">
-            <div>
-              <p>Cam2</p>
-              <span>Price: €90.00</span>
-              <br />
-              <a class="remove" href="#">remove</a>
-            </div>
-          </div>
-        </td>
-        <td><input type="number" value="1" min="1"></td>
-        <td>€90.00</td>
-      </tr>
-      <tr>
-        <td>
-          <div class="cart-info">
-            <img src="images/vcam_3.jpg" alt="">
-            <div>
-              <p>Cam3</p>
-              <span>Price: €60.00</span>
-              <br />
-              <a class="remove" href="#">remove</a>
-            </div>
-          </div>
-        </td>
-        <td><input type="number" value="1" min="1"></td>
-        <td>€60.00</td>
-      </tr>
-      <tr>
-        <td>
-          <div class="cart-info">
-            <img src="images/vcam_4.jpg" alt="">
-            <div>
-              <p>Cam4</p>
-              <span>Price: €60.00</span>
-              <br />
-              <a class="remove" href="#">remove</a>
-            </div>
-          </div>
-        </td>
-        <td><input type="number" value="1" min="1"></td>
-        <td>€60.00</td>
-      </tr>
-      <tr>
-        <td>
-          <div class="cart-info">
-            <img src="images/vcam_5.jpg" alt="">
-            <div>
-              <p>Cam5</p>
-              <span>Price: €60.00</span>
-              <br />
-              <a class="remove" href="#">remove</a>
-            </div>
-          </div>
-        </td>
-        <td><input type="number" value="1" min="1"></td>
-        <td>€60.00</td>
-      </tr>
-    </table>
+    <div class="container">
+      <div class="row mt-5" id="row">
+        <table id="table" class="table table-bordered">
+          <thead>
+            <th class="text-center" scope="col">Appareil photo sélectionné</th>
+            <th class="text-center" scope="col">Lentille choisie</th>
+            <th class="text-center" scope="col">Quantité</th>
+            <th class="text-center" scope="col">Prix</th>
+          </thead>
+          <tbody id="cartBody">
+          </tbody>
+        </table>
+      </div>
 
-    <div class="total-price" id="total-price">
-      <table>
-        <tr>
-          <td>Sous-total</td>
-          <td>€200</td>
-        </tr>
-        <tr>
-          <td>Tax</td>
-          <td>€50</td>
-        </tr>
-        <tr>
-          <td>Total</td>
-          <td>€250</td>
-        </tr>
-      </table>
-      <a href="#" class="checkout btn" id="checkout btn">Procéder au paiment</a>
-
-    </div>
-
+<!-- CART BUTTONS -->
+<div class="row">
+  <div class="col-6">
+    <button id="validationBtn" class="btn btn-success mt-3 mb-5 mr-0">
+    Valider le panier
+    </button>
   </div>
+  <div class="col-6">
+    <button id="clearBtn" class="btn btn-danger mt-3 mb-5">
+    Vider le panier
+    </button>
+  </div>
+  <div id="returnCol" class="col-4">
+    <a href = "index.html" id="returnBtn" class="btn btn-success mt-3 mb-5">
+    Retourner à la page d'accueil
+    </a>
+  </div>
+</div>
+
+    
 
   <!-- Product order form -->
-  <div class="order">
-    <h2 class="order__title">Commande</h2>
+  <div id="form">
+    <div class="separation mt-5 mx-auto"></div>
 
-    <p class="order__paragraph">
-        Remplissez le formulaire pour compléter votre commande
-    </p>
+      <div class="row mb-5">
+        <div class="col-8 mb-5 mx-auto">
+          <h2 class="mt-5 mb-4">Vos informations de livraison</h2>
+          <form novalidate class="needs-validation" action="order.html">
+            <p class="lead">Coordonnées</p>
+            <div class="row">
+              <div class="col-6">
+                <div class="form-group">
+                  <label for="clientLastName">Nom</label>
+                  <input type="text" class="form-control" id="clientLastName" required minlength="2"/>
+                  <div class="invalid-feedback">
+                    Veuillez renseigner un nom
+                  </div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="form-group">
+                  <label for="clientFirstName">Prénom</label>
+                  <input type="text" class="form-control" id="clientFirstName" required minlength="2"/>
+                  <div class="invalid-feedback">
+                    Veuillez renseigner un prénom
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <div class="form-group">
+                  <label for="clientEmail">E-mail</label>
+                  <input type="email" class="form-control" id="clientEmail" required/>
+                  <div class="invalid-feedback">
+                    Veuillez renseigner un e-mail valide
+                  </div>
+                </div>
+              </div>
+            </div>
 
-    <form action="commande.html" class="form">
-        <div>
-            <label for="firstname">Prénom <span class="required">*</span></label>
-            <input type="text" id="firstname" required>
-            <div class="errors"></div>
+            <p class="lead">Adresse</p>
+            <div class="row">
+              <div class="col-12">
+                <!-- FIXME use regex to verify -->
+                <div class="form-group">
+                  <label for="clientAddress">Adresse</label>
+                  <input type="text" class="form-control" id="clientAddress" required/>
+                  <div class="invalid-feedback">
+                    Veuillez renseigner une adresse
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <!-- FIXME use regex to verify -->
+                <div class="form-group">
+                  <label for="clientCity">Code Postal et Ville</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="clientCity" required
+                    minlength="1"
+                  />
+                  <div class="invalid-feedback">
+                    Veuillez renseigner un code postal suivi d'une ville
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group mt-4">
+              <input
+                id="submitBtn"
+                type="submit"
+                class="btn btn-success"
+                value="Valider la commande" required
+              />
+            </div>
+          </form>
         </div>
-
-        <div>
-            <label for="lastname">Nom <span class="required">*</span></label>
-            <input type="text" id="lastname" required>
-            <div class="errors"></div>
-        </div>
-
-        <div>
-            <label for="address">Adresse <span class="required">*</span></label>
-            <input type="text" id="address" required>
-            <div class="errors"></div>
-        </div>
-
-        <div>
-            <label for="city">Ville <span class="required">*</span></label>
-            <input type="text" id="city" required>
-            <div class="errors"></div>
-        </div>
-
-        <div>
-            <label for="email">Email <span class="required">*</span></label>
-            <input type="email" id="email" required>
-            <div class="errors"></div>
-        </div>
-
-        <button type="submit" id="submit">Commander <span>></span></button>
-    </form>
+      </div>
+    </div>
+  </div>
 </div>
-<!-- Product order form -->
-</div>
-</div>
-</div>
-</div>
+ 
 <!-- Page wrapper -->
 
 

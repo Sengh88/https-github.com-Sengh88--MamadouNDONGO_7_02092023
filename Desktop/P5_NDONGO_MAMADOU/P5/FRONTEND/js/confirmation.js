@@ -1,36 +1,52 @@
-let containerConfirmation = document.getElementById("confirmation");
+/* ****************GETTING AND PARSING LOCALSTORAGE INFO***************** */
 
-//Récupération localstorage
-let commande =  Object.keys(localStorage);
-for (i=0; i < commande.length; i++) {
-    let recapCommande = JSON.parse(localStorage.getItem(commande[i]))
+//contact object
+let contactObj = JSON.parse(localStorage.getItem("contactObject"));
 
-    //création de la div
-    let divConfirmation = document.createElement("div");
-    containerConfirmation.appendChild(divConfirmation);
+//array of camera objects
+let camArray = JSON.parse(localStorage.getItem("camArray"));
 
-    //création du h2
-    let remerciement = document.createElement("h2");
-    remerciement.classList.add("message");
-    remerciement.innerHTML = "Nous vous remerçions pour votre commande, elle sera traité dans les meilleures délais !";
-    containerConfirmation.appendChild(remerciement);
+/* ***************CREATING FINAL OBJECT TO POST TO BACKEND**************** */
+let finalObj = {};
+//storing contact info object inside the final object
+finalObj.contact = contactObj;
 
-    // création du h3
-    let recapitulatif = document.createElement("h3");
-    recapitulatif.classList.add("recapitulatif");
-    recapitulatif.innerHTML = "Voici le récapitulatif de votre commande :";
-    containerConfirmation.appendChild(recapitulatif);
+//creating an array of camera ids
+let camIdArray = (function createCamIdArr() {
+  let array = [];
+  for (i = 0; i < camArray.length; i++) {
+    array.push(camArray[i].cam_id);
+  }
+  return array;
+})();
 
-    //ajout du l'id commande
-    let id = document.createElement("p");
-    id.classList.add("paragraphe");
-    id.innerHTML = "Identifiant de la commande : "+ recapCommande.idCommande;
-    containerConfirmation.appendChild(id);
+//storing camera id array inside the final object
+finalObj.products = camIdArray;
 
-    // Ajout du prix
-    let prix = document.createElement("p");
-    prix.classList.add("paragraphe");
-    prix.innerHTML = "Prix total de votre commande : " + recapCommande.prixTotal + " €";
-    containerConfirmation.appendChild(prix);
-}
+/* *****************POSTING FINAL OBJECT****************** */
+camerasUrl = `http://localhost:3000/api/cameras/order`;
+
+var xhr = new XMLHttpRequest();
+
+xhr.open("POST", camerasUrl, true);
+
+xhr.onload = function () {
+  if (this.status == 201) {
+    var order = JSON.parse(this.responseText);
+    let successMsg = document.querySelector(".success-message");
+    successMsg.textContent =
+      "Merci pour votre achat  " +
+      order.contact.firstName +
+      " " +
+      order.contact.lastName +
+      ". Votre numéro de commande est le suivant: " +
+      order.orderId +
+      ".";
+  } else {
+  }
+};
+
+xhr.setRequestHeader("Content-type", "application/json");
+xhr.send(JSON.stringify(finalObj));
+
 localStorage.clear();
